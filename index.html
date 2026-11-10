@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>KK Anand's Sudoku</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HOME -->
+  <main id="home" class="view">
+    <header class="top">
+      <p class="greeting">नमस्ते, KK Anand 🙏</p>
+      <h1>KK Anand's Sudoku</h1>
+      <p class="place">📍 Shujalpur</p>
+      <p class="sub">Pick a level. 1 is easiest, 100 is toughest.</p>
+    </header>
+
+    <div class="tabs" id="tabs" role="tablist">
+      <button class="tab active" data-filter="all">All</button>
+      <button class="tab" data-filter="easy">Easy</button>
+      <button class="tab" data-filter="medium">Medium</button>
+      <button class="tab" data-filter="hard">Hard</button>
+      <button class="tab" data-filter="expert">Expert</button>
+    </div>
+
+    <p class="progress" id="progress"></p>
+    <div class="levels" id="levels"></div>
+
+    <footer class="footer">Made with ❤️ for KK Anand, Shujalpur</footer>
+  </main>
+
+  <!-- GAME -->
+  <main id="game" class="view hidden">
+    <header class="game-top">
+      <button id="backBtn" class="ghost" aria-label="Back to home">&larr; Home</button>
+      <div class="title">
+        <strong id="levelTitle">Level 1</strong>
+        <span id="levelTier" class="badge">Easy</span>
+      </div>
+      <div id="timer" class="timer">00:00</div>
+    </header>
+
+    <div id="board" class="board" role="grid" aria-label="Sudoku board"></div>
+
+    <div id="pad" class="pad"></div>
+
+    <p id="message" class="message" aria-live="polite"></p>
+
+    <div class="actions">
+      <button id="checkBtn" class="btn secondary">Check</button>
+      <button id="submitBtn" class="btn primary hidden">Submit</button>
+    </div>
+  </main>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <h2 id="modalTitle"></h2>
+      <p id="modalText"></p>
+      <button id="modalBtn" class="btn primary">OK</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
